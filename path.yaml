@@ -1,0 +1,112 @@
+apiVersion: content.astrona.io/v1alpha1
+kind: TrainingPath
+metadata:
+  id: ATP001
+  slug: linux-foundation-certified-sysadmin-lfcs
+  title: "Linux Foundation Certified System Administrator (LFCS)"
+  description: "This path prepares learners for the LFCS certification exam, covering essential Linux system administration skills and knowledge."
+  version: "1.0.0"
+  language: "en"
+  authors:
+    - name: "Paris Nakita Kejser"
+      email: "paris@astrona.io"
+      company: "Astrona.io"
+  tags:
+    - "Linux"
+    - "System Administration"
+    - "Certification Preparation"
+    - "LFCS"
+  license: "Apache-2.0"
+
+spec:
+  audience: "Aspiring Linux System Administrators and IT professionals seeking LFCS certification."
+  difficulty: "Intermediate"
+
+  estimatedDuration: "4h"
+
+  examPreparation:
+    enabled: true
+    title: "Linux Foundation Certified System Administrator (LFCS)"
+    officialSyllabusUrl: "https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/"
+    examId: "LFCS"
+    provider: "The Linux Foundation"
+
+  prerequisites:
+    - "Basic understanding of Linux command-line operations."
+    - "Familiarity with system administration concepts and networking fundamentals."
+    - "Access to a Linux environment for hands-on practice."
+    - "Completion of the 'Introduction to Linux' course or equivalent experience is recommended."
+    - "Knowledge of shell scripting and basic programming concepts is beneficial."
+
+  learningOutcomes:
+    - "Demonstrate proficiency in Linux system administration tasks, including user management, file permissions, and process control."
+    - "Configure and manage Linux networking, including IP addressing, routing, and firewall settings."
+    - "Install, configure, and maintain essential Linux services such as SSH, web servers, and databases."
+    - "Troubleshoot common Linux system issues and apply best practices for system maintenance and security."
+    - "Prepare effectively for the LFCS certification exam by mastering the required competencies."
+
+  stages:
+    - id: "ATP001-STG001"
+      title: "Operations Deployment"
+      description: "Setup and configure Kubernetes clusters securely."
+      weight: 25
+      learningOutcomes:
+        - "Configure kernel parameters, persistent and non-persistent"
+
+      content:
+        - ref: ATS002
+          repository: "git@github.com:astrona-io/ATS002.git"
+          path: "."
+          version: "1.0.0"
+
+    - id: "ATP001-STG002"
+      title: "Networking"
+      description: "Setup and configure Kubernetes clusters securely."
+      weight: 25
+      learningOutcomes:
+        - "Configure kernel parameters, persistent and non-persistent"
+
+      content:
+        - ref: ATS003
+          repository: "git@github.com:astrona-io/ATS003.git"
+          path: "."
+          version: "1.0.0"
+
+    - id: "ATP001-STG003"
+      title: "Storage"
+      description: "Setup and configure Kubernetes clusters securely."
+      weight: 20
+      learningOutcomes:
+        - "Configure kernel parameters, persistent and non-persistent"
+
+      content:
+        - ref: ATS004
+          repository: "git@github.com:astrona-io/ATS004.git"
+          path: "."
+          version: "1.0.0"
+
+    - id: "ATP001-STG004"
+      title: "Essential Commands"
+      description: "Setup and configure Kubernetes clusters securely."
+      weight: 20
+      learningOutcomes:
+        - "Configure kernel parameters, persistent and non-persistent"
+
+      content:
+        - ref: ATS006
+          repository: "git@github.com:astrona-io/ATS006.git"
+          path: "."
+          version: "1.0.0"
+
+    - id: "ATP001-STG005"
+      title: "Users and Groups"
+      description: "Setup and configure Kubernetes clusters securely."
+      weight: 10
+      learningOutcomes:
+        - "Configure kernel parameters, persistent and non-persistent"
+
+      content:
+        - ref: ATS005
+          repository: "git@github.com:astrona-io/ATS005.git"
+          path: "."
+          version: "1.0.0"

@@ -45,68 +45,100 @@ spec:
     - "Troubleshoot common Linux system issues and apply best practices for system maintenance and security."
     - "Prepare effectively for the LFCS certification exam by mastering the required competencies."
 
+  # One stage per exam domain; titles match the exam (astrona-content
+  # exams/golden-kubestronaut/lfcs.yaml), weights follow it, and each stage's
+  # learning outcomes are the domain's official competencies.
   stages:
     - id: "ATP001-STG001"
       title: "Operations Deployment"
-      description: "Setup and configure Kubernetes clusters securely."
+      description: "Keep a Linux system running: kernel parameters, processes and services, scheduled jobs, packages and repositories, recovering from failures, virtual machines, containers and SELinux."
       weight: 25
       learningOutcomes:
         - "Configure kernel parameters, persistent and non-persistent"
+        - "Diagnose, identify, manage, and troubleshoot processes and services"
+        - "Manage or schedule jobs for executing commands"
+        - "Search for, install, validate, and maintain software packages or repositories"
+        - "Recover from hardware, operating system, or filesystem failures"
+        - "Manage Virtual Machines (libvirt)"
+        - "Configure container engines, create and manage containers"
+        - "Create and enforce MAC using SELinux"
 
       content:
         - ref: ATS002
-          repository: "git@github.com:astrona-io/ATS002.git"
+          repository: "https://github.com/astrona-io/ATS002"
           path: "."
           version: "1.0.0"
 
     - id: "ATP001-STG002"
       title: "Networking"
-      description: "Setup and configure Kubernetes clusters securely."
+      description: "Connect and secure a Linux host: IPv4 and IPv6 with name resolution, time sync, OpenSSH, packet filtering and NAT, static routes, bridges and bonds, reverse proxies and load balancers."
       weight: 25
       learningOutcomes:
-        - "Configure kernel parameters, persistent and non-persistent"
+        - "Configure IPv4 and IPv6 networking and hostname resolution"
+        - "Set and synchronize system time using time servers"
+        - "Monitor and troubleshoot networking"
+        - "Configure the OpenSSH server and client"
+        - "Configure packet filtering, port redirection, and NAT"
+        - "Configure static routing"
+        - "Configure bridge and bonding devices"
+        - "Implement reverse proxies and load balancers"
 
       content:
         - ref: ATS003
-          repository: "git@github.com:astrona-io/ATS003.git"
+          repository: "https://github.com/astrona-io/ATS003"
           path: "."
           version: "1.0.0"
 
     - id: "ATP001-STG003"
       title: "Storage"
-      description: "Setup and configure Kubernetes clusters securely."
+      description: "Lay out and look after storage: LVM, the virtual file system, filesystems, remote filesystems and network block devices, swap, automounters and storage performance."
       weight: 20
       learningOutcomes:
-        - "Configure kernel parameters, persistent and non-persistent"
+        - "Configure and manage LVM storage"
+        - "Manage and configure the virtual file system"
+        - "Create, manage, and troubleshoot filesystems"
+        - "Use remote filesystems and network block devices"
+        - "Configure and manage swap space"
+        - "Configure filesystem automounters"
+        - "Monitor storage performance"
 
       content:
         - ref: ATS004
-          repository: "git@github.com:astrona-io/ATS004.git"
+          repository: "https://github.com/astrona-io/ATS004"
           path: "."
           version: "1.0.0"
 
     - id: "ATP001-STG004"
       title: "Essential Commands"
-      description: "Setup and configure Kubernetes clusters securely."
+      description: "The everyday toolbox: Git basics, services, system performance, application constraints, disk space and SSL certificates."
       weight: 20
       learningOutcomes:
-        - "Configure kernel parameters, persistent and non-persistent"
+        - "Basic Git Operations"
+        - "Create, configure, and troubleshoot services"
+        - "Monitor and troubleshoot system performance and services"
+        - "Determine application and service specific constraints"
+        - "Troubleshoot diskspace issues"
+        - "Work with SSL certificates"
 
       content:
         - ref: ATS006
-          repository: "git@github.com:astrona-io/ATS006.git"
+          repository: "https://github.com/astrona-io/ATS006"
           path: "."
           version: "1.0.0"
 
     - id: "ATP001-STG005"
       title: "Users and Groups"
-      description: "Setup and configure Kubernetes clusters securely."
+      description: "Accounts and access: local users and groups, environment profiles, resource limits, ACLs and LDAP accounts."
       weight: 10
       learningOutcomes:
-        - "Configure kernel parameters, persistent and non-persistent"
+        - "Create and manage local user and group accounts"
+        - "Manage personal and system-wide environment profiles"
+        - "Configure user resource limits"
+        - "Configure and manage ACLs"
+        - "Configure the system to use LDAP user and group accounts"
 
       content:
         - ref: ATS005
-          repository: "git@github.com:astrona-io/ATS005.git"
+          repository: "https://github.com/astrona-io/ATS005"
           path: "."
           version: "1.0.0"
